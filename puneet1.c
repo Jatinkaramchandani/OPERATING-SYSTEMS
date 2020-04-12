@@ -15,7 +15,7 @@ int main()
        float avg_turn_ar_time=0;// Average turn around time for the five different process.
        int n,fd;int i=0;char buffer[100];// Variables
        fd = open("cpuburst.txt",O_RDWR,0777);//Opening the file
-       n= read(fd,buffer,10000000);//reading the file
+       n= read(fd,buffer,100);//reading the file
        write(1,"\n Reading the file",18);
        for(i=0;i<100;i++){if(i%5==0){write(1,".",1);}}// Don't confuse it's printing dots only.
        write(1,"\n Validating the read Values from the file",42);

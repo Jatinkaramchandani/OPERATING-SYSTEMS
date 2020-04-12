@@ -25,8 +25,8 @@ int main()
        write(1,"\n Reading the CPU Burst for P1,P2,P3,P4,P5",42);for(i=0;i<100;i++){if(i%5==0){write(1,".",1);}}// Don't confuse it's printing dots(pattern) only.
        for(i=0;i<5;i++){printf("\n Enter the burst time of P");printf("%d\n",i);scanf("%d",&burst_time[i]);}// Explicit option to add the CPU burst, if don't want to give other CPU burst just input the five values shown above.
        for(int i = 0; i <5; ++i){for (int j = i + 1; j < 5; ++j){if (burst_time[i] > burst_time[j]){int a =  burst_time[i];burst_time[i] = burst_time[j];burst_time[j] = a;}}}// Arranging the processes according to the CPU busrt time to in ascending order to do the Shortest job first.
-       for(i=0;i<5;i++){printf("%d",burst_time[i]);}
-       write(1,"\n Calculating the waiting time",30);for(i=0;i<100;i++){if(i%5==0){write(1,".",1);}}//Calculating the Waiting time.
+       for(i=0;i<5;i++){printf("\n%d",burst_time[i]);}
+       write(1,"\n Calculating the waiting time",31);for(i=0;i<100;i++){if(i%5==0){write(1,".",1);}}//Calculating the Waiting time.
        for(i=0;i<5;i++){if(i==0){wait_time[i]=0;}else{wait_time[i]=wait_time[i-1]+burst_time[i-1];}}
        for(i=0;i<5;i++){printf("\n%d\n",wait_time[i]);}
        write(1,"\n Calculating the completion time",33);for(i=0;i<100;i++){if(i%5==0){write(1,".",1);}}// Completion time = Burst time + Wait time.

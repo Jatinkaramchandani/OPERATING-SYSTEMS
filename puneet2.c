@@ -53,9 +53,9 @@ void main()
         else
         {
             st[i]=ft[i-1];
-            wt[i]=st[i]-at[i];
+            wt[i]=st[i]-at[i-1];
             ft[i]=st[i]+et[i];
-            ta[i]=ft[i]-at[i];
+            ta[i]=ft[i]-at[i-1];
         }
         totwt+=wt[i];
         totta+=ta[i];
